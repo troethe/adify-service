@@ -1,3 +1,3 @@
-# java-microservice-base
+# adify-service
 
-See [https://github.com/thedrlambda/java-microservices-project](https://github.com/thedrlambda/java-microservices-project)
+See [https://github.com/eficode-academy/java-microservice-project-2](https://github.com/eficode-academy/java-microservice-project-2)
