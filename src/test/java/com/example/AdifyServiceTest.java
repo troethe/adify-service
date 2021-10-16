@@ -22,7 +22,7 @@ class AdifyServiceTest {
     SenderSpy spy = new SenderSpy();
     AdifyService a = new AdifyService(new Adify(new HerokuGetRequest("adify")), "SESSION_ID,USER_ID,PRODUCT_ID", spy);
     a.execute();
-    assertEquals("fixme", spy.event);
+    assertEquals("display", spy.event);
   }
 
 }
