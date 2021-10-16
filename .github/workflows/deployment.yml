@@ -1,0 +1,22 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{secrets.ADIFY_PUBLIC_REPOS}}
+
+      - name: Compile
+        run: mvn install
+
+      - name: Test
+        run: mvn test -DskipTests=false -Dgroups=slow
