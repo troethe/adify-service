@@ -48,6 +48,7 @@ class AdifyServiceTest {
   }
 
   @Test
+  @Tag("fast")
   void bar2() {
     SenderSpy spy = new SenderSpy();
     AdifyService a = new AdifyService(new Adify(new MockGetRequest("")), "SESSION_ID,USER_ID,PRODUCT_ID", spy);
