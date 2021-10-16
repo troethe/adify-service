@@ -1,9 +1,9 @@
-name: Continuous Integration
+name: Deployment
 
 on:
   push:
     branches:
-      - "ready/**"
+      - "master"
 
 jobs:
   build:
@@ -19,4 +19,4 @@ jobs:
         run: mvn install
 
       - name: Test
-        run: mvn test -DskipTests=false -Dgroups=fast
+        run: mvn test -DskipTests=false -Dgroups=slow
